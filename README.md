@@ -6,4 +6,7 @@
 3.https://codetorial.net/tensorflow/classifying_the_cats_and_dogs.html</br>
 
 <h1>사용툴</h1>
-https://www.jetbrains.com/ko-kr/pycharm/download/#section=windows
+이미지 크롤링:https://www.jetbrains.com/ko-kr/pycharm/download/#section=windows<br>
+CNN 구축:https://www.anaconda.com/
+<h3>주의</h3>
+이미지 크롤링 및 CNN 구축을 통일해서 사용해도 상관은 없음
