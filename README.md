@@ -8,5 +8,7 @@
 <h1>사용툴</h1>
 이미지 크롤링:https://www.jetbrains.com/ko-kr/pycharm/download/#section=windows<br>
 CNN 구축:https://www.anaconda.com/
-<h3>주의</h3>
-이미지 크롤링 및 CNN 구축을 통일해서 사용해도 상관은 없음
+<h2>주의</h2>
+이미지 크롤링 및 CNN 구축을 통일해서 사용해도 상관은 없음</br>
+과제 양식의 경우 Hwp로 통일하도록<br>
+더럽게 안들어가짐ㅋㅋㅋㅋ
