@@ -4,6 +4,7 @@
 1.https://velog.io/@ganta/%EC%9D%B4%EB%AF%B8%EC%A7%80-%ED%81%AC%EB%A1%A4%EB%A7%81-%ED%95%98%EA%B8%B0</br>
 2.https://nouu94.tistory.com/25</br>
 3.https://codetorial.net/tensorflow/classifying_the_cats_and_dogs.html</br>
+4.https://crablab.tistory.com/29<br>
 
 <h1>사용툴</h1>
 이미지 크롤링:https://www.jetbrains.com/ko-kr/pycharm/download/#section=windows<br>
@@ -20,6 +21,7 @@ CNN 구축:https://www.anaconda.com/
 1.https://velog.io/@ganta/%EC%9D%B4%EB%AF%B8%EC%A7%80-%ED%81%AC%EB%A1%A4%EB%A7%81-%ED%95%98%EA%B8%B0</br>
 2.https://nouu94.tistory.com/25</br>
 3.https://codetorial.net/tensorflow/classifying_the_cats_and_dogs.html</br>
+4.https://crablab.tistory.com/29<br>
 
 <h1>使用ツール</h1>
 イメージクロリング:https://www.jetbrains.com/ko-kr/pycharm/download/#section=Windows<br>
