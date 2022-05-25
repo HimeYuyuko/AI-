@@ -33,7 +33,7 @@ for i in img:
     except KeyError:
         imgurl.append(i.attrs["data-src"])
 for i in imgurl:
-    path = "C:\\Users\\sky15\\PycharmProjects\\pythonProject2"+dir.strip(".")+"\\"
+    path = os.path.dirname(os.path.abspath(__file__))+dir.strip(".")+"\\"
     urlretrieve(i,path+search+str(n)+".jpg")
     n+=1
     if(n>10):
