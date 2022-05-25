@@ -6,7 +6,7 @@
 3.https://codetorial.net/tensorflow/classifying_the_cats_and_dogs.html</br>
 4.https://crablab.tistory.com/29<br>
 5.https://yobbicorgi.tistory.com/29<br>
-~~6.https://hhahn.tistory.com/2~~ 사용 안됨<br>
+~~6.https://hhahn.tistory.com/2사용 안됨<br>~~
 7.https://blog.naver.com/fkdldjs60/222161730266
 
 <h1>사용툴</h1>
@@ -26,7 +26,7 @@ CNN 구축:https://www.anaconda.com/
 3.https://codetorial.net/tensorflow/classifying_the_cats_and_dogs.html</br>
 4.https://crablab.tistory.com/29<br>
 5.https://yobbicorgi.tistory.com/29<br>
-~~6.https://hhahn.tistory.com/2~~使用できない<br>
+~~6.https://hhahn.tistory.com/2使用できない<br>~~
 7.https://blog.naver.com/fkdldjs60/222161730266
 
 <h1>使用ツール</h1>
