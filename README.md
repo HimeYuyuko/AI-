@@ -5,6 +5,7 @@
 2.https://nouu94.tistory.com/25</br>
 3.https://codetorial.net/tensorflow/classifying_the_cats_and_dogs.html</br>
 4.https://crablab.tistory.com/29<br>
+5.https://yobbicorgi.tistory.com/29<br>
 
 <h1>사용툴</h1>
 이미지 크롤링:https://www.jetbrains.com/ko-kr/pycharm/download/#section=windows<br>
@@ -22,6 +23,7 @@ CNN 구축:https://www.anaconda.com/
 2.https://nouu94.tistory.com/25</br>
 3.https://codetorial.net/tensorflow/classifying_the_cats_and_dogs.html</br>
 4.https://crablab.tistory.com/29<br>
+5.https://yobbicorgi.tistory.com/29<br>
 
 <h1>使用ツール</h1>
 イメージクロリング:https://www.jetbrains.com/ko-kr/pycharm/download/#section=Windows<br>
