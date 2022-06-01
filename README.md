@@ -8,6 +8,7 @@
 * https://yobbicorgi.tistory.com/29
 * https://hhahn.tistory.com/2
 * https://blog.naver.com/fkdldjs60/222161730266
+* https://antilibrary.org/1980
 
 ### 사용툴
 * 이미지 크롤링:https://www.jetbrains.com/ko-kr/pycharm/download/#section=windows
