@@ -4,8 +4,12 @@ from urllib.parse import  quote_plus
 from bs4 import BeautifulSoup
 from selenium import webdriver
 import os
+import time
+
+SCROLL_PAUSE_TIME = 1
 
 def createDirectory(directory):
+    '''just create directory'''
     try:
         if not os.path.exists(directory):
             os.makedirs(directory)
@@ -13,11 +17,23 @@ def createDirectory(directory):
         print("Error: Failed to create the directory.")
 
 search = input('검색어:')
-url=f'https://www.google.com/search?q={quote_plus(search)}&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjT-bLHvPr3AhVJx2EKHQU9A-0Q_AUoAXoECAIQAw&biw=929&bih=874&dpr=1'
+url=f'https://www.google.co.kr/imghp?hl=ko&tab=ri&ogbl&q={quote_plus(search)}'
 driver = webdriver.Chrome()
 driver.get(url)
-for i in range(500):
-    driver.execute_script("window.scrollBy(0,100000)")
+
+# scroll to max search length
+last_height = driver.execute_script("return document.body.scrollHeight")
+while True:
+    driver.execute_script("window.scrollTo(0, document.body.scrollHeight);") 
+    time.sleep(SCROLL_PAUSE_TIME) 
+    new_height = driver.execute_script("return document.body.scrollHeight")
+
+    if new_height == last_height:
+        try:    
+            driver.find_element_by_css_selector('.mye4qd').click()
+        except:
+            break
+    last_height = new_height
 
 html = driver.page_source
 soup = BeautifulSoup(html, "html.parser")
@@ -32,10 +48,12 @@ for i in img:
         imgurl.append(i.attrs["src"])
     except KeyError:
         imgurl.append(i.attrs["data-src"])
+
 for i in imgurl:
     path = os.path.dirname(os.path.abspath(__file__))+dir.strip(".")+"\\"
     urlretrieve(i,path+search+str(n)+".jpg")
     n+=1
     if(n>10):
         break
+
 driver.close()
