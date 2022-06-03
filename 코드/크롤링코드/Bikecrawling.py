@@ -1,8 +1,12 @@
-from urllib.request import  urlopen
-from urllib.request import  urlretrieve
+from urllib.request import  urlopen, urlretrieve
 from urllib.parse import  quote_plus
+
 from bs4 import BeautifulSoup
+
 from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+
 import os
 import time
 
@@ -16,10 +20,16 @@ def createDirectory(directory):
     except OSError:
         print("Error: Failed to create the directory.")
 
+url=f'https://www.google.co.kr/imghp?hl=ko&tab=ri&ogbl'
 search = input('검색어:')
-url=f'https://www.google.co.kr/imghp?hl=ko&tab=ri&ogbl&q={quote_plus(search)}'
-driver = webdriver.Chrome()
+browser = input('브라우저(1: 크롬, 2: 엣지): ')
+
+driver = webdriver.Edge() if browser == '2' else webdriver.Chrome()
 driver.get(url)
+
+elem = driver.find_element(By.NAME, 'q')
+elem.send_keys(search)
+elem.send_keys(Keys.RETURN)
 
 # scroll to max search length
 last_height = driver.execute_script("return document.body.scrollHeight")
@@ -37,23 +47,21 @@ while True:
 
 html = driver.page_source
 soup = BeautifulSoup(html, "html.parser")
-img = soup.select('.rg_i.Q4LuWd')
-n=1
-imgurl= []
+imgs = soup.select('.rg_i.Q4LuWd')
 
 dir = ".\\"+search
+imgurls= []
 createDirectory(dir)
-for i in img:
+for img in imgs:
     try:
-        imgurl.append(i.attrs["src"])
+        imgurls.append(img.attrs["src"])
     except KeyError:
-        imgurl.append(i.attrs["data-src"])
+        imgurls.append(img.attrs["data-src"])
 
-for i in imgurl:
+n=1
+for imgurl in imgurls:
     path = os.path.dirname(os.path.abspath(__file__))+dir.strip(".")+"\\"
-    urlretrieve(i,path+search+str(n)+".jpg")
+    urlretrieve(imgurl, path+search+str(n)+".jpg")
     n+=1
-    if(n>10):
-        break
 
 driver.close()
