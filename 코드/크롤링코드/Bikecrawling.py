@@ -40,7 +40,7 @@ while True:
 
     if new_height == last_height:
         try:    
-            driver.find_element_by_css_selector('.mye4qd').click()
+            driver.find_element(By.CSS_SELECTOR, '.mye4qd').click()
         except:
             break
     last_height = new_height
@@ -58,10 +58,10 @@ for img in imgs:
     except KeyError:
         imgurls.append(img.attrs["data-src"])
 
-n=1
+n = 1
 for imgurl in imgurls:
     path = os.path.dirname(os.path.abspath(__file__))+dir.strip(".")+"\\"
-    urlretrieve(imgurl, path+search+str(n)+".jpg")
-    n+=1
+    urlretrieve(imgurl, f"{path + search + str(n)}.jpg")
+    n += 1
 
 driver.close()
