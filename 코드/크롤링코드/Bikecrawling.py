@@ -64,4 +64,4 @@ for imgurl in imgurls:
     urlretrieve(imgurl, f"{path + search + str(n)}.jpg")
     n += 1
 
-driver.close()
+driver.quit()
