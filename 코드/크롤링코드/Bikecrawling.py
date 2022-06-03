@@ -57,7 +57,7 @@ for img in imgs:
 n = 1
 for imgurl in imgurls:
     path = os.path.dirname(os.path.abspath(__file__))+dir.strip(".")+"\\"
-    fname = f"{path + search + str(n)}.png"
+    fname = f"{path + search + str(n)}.jpg"
     #print(fname)
     urlretrieve(imgurl, fname)
     n += 1
