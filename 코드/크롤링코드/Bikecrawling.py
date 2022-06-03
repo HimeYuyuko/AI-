@@ -20,16 +20,12 @@ def createDirectory(directory):
     except OSError:
         print("Error: Failed to create the directory.")
 
-url=f'https://www.google.co.kr/imghp?hl=ko&tab=ri&ogbl'
 search = input('검색어:')
 browser = input('브라우저(1: 크롬, 2: 엣지): ')
 
+url=f'https://duckduckgo.com/?q={search}&t=h_&iax=images&ia=images'
 driver = webdriver.Edge() if browser == '2' else webdriver.Chrome()
 driver.get(url)
-
-elem = driver.find_element(By.NAME, 'q')
-elem.send_keys(search)
-elem.send_keys(Keys.RETURN)
 
 # scroll to max search length
 last_height = driver.execute_script("return document.body.scrollHeight")
@@ -39,29 +35,31 @@ while True:
     new_height = driver.execute_script("return document.body.scrollHeight")
 
     if new_height == last_height:
-        try:    
-            driver.find_element(By.CSS_SELECTOR, '.mye4qd').click()
-        except:
-            break
+        break
     last_height = new_height
 
 html = driver.page_source
 soup = BeautifulSoup(html, "html.parser")
-imgs = soup.select('.rg_i.Q4LuWd')
+imgs = soup.select('img.tile--img__img')
+print(len(imgs))
 
 dir = ".\\"+search
 imgurls= []
 createDirectory(dir)
 for img in imgs:
     try:
-        imgurls.append(img.attrs["src"])
+        src = img.attrs["src"]
+        imgurls.append("https:" + src)
     except KeyError:
-        imgurls.append(img.attrs["data-src"])
+        src = img.attrs["data-src"]
+        imgurls.append("https:" + src)
 
 n = 1
 for imgurl in imgurls:
     path = os.path.dirname(os.path.abspath(__file__))+dir.strip(".")+"\\"
-    urlretrieve(imgurl, f"{path + search + str(n)}.jpg")
+    fname = f"{path + search + str(n)}.png"
+    #print(fname)
+    urlretrieve(imgurl, fname)
     n += 1
 
 driver.quit()
