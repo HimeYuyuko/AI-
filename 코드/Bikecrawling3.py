@@ -51,6 +51,17 @@ imgs = soup.select('img.tile--img__img')
 print(len(imgs))
 
 dir = ".\\data\\train"+"\\"+search
+
+if os.path.exists(dir):
+    folder_num = int(0);
+    for i in range(99):
+        if os.path.exists(dir+"_"+str(folder_num)):
+            folder_num += 1
+        else:
+            dir = dir+"_"+str(folder_num)
+            break
+print(dir)
+
 imgurls= []
 createDirectory(dir)
 for img in imgs:
