@@ -11,6 +11,7 @@
 * https://antilibrary.org/1980
 * https://data-panic.tistory.com/13?category=745430
 * https://www.kaggle.com/competitions/dogs-vs-cats/code?competitionId=3362&sortBy=voteCount
+* https://deep-deep-deep.tistory.com/56
 ### 사용툴
 * 이미지 크롤링:https://www.jetbrains.com/ko-kr/pycharm/download/#section=windows
 * CNN 구축:https://www.anaconda.com/
@@ -35,6 +36,7 @@
 * https://blog.naver.com/fkdldjs60/222161730266
 * https://data-panic.tistory.com/13?category=745430
 * https://www.kaggle.com/competitions/dogs-vs-cats/code?competitionId=3362&sortBy=voteCount
+* https://deep-deep-deep.tistory.com/56
 
 ### 使用ツール
 * メージクロリング:https://www.jetbrains.com/ko-kr/pycharm/download/#section=Windows
